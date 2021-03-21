@@ -3,7 +3,6 @@ const app = express();
 const port = 3030;
 const path = require("path");
 
-
 const publicPatch = path.resolve(__dirname, "./public");
 app.use(express.static(publicPatch));
 

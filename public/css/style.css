@@ -1,10 +1,18 @@
 body {
-    background-color: #EAC926;
+    background-color: #ebebeb;
     font-size: 12px;
-    font-family: Roboto, "Helvetica Neue", Helvetica, Arial
 }
 
-.centrado {
+* {
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #EAC926;
+}
+
+.busqueda {
     text-align: center;
 }
 
@@ -13,34 +21,85 @@ body {
     text-decoration: none;
 }
 
+.boton {
+    font-size: 1em;
+    box-sizing: content-box;
+    width: 10px;
+    border-radius: solid 3px #666;
+    background: #ebebeb;
+}
+
+.contenedor-burger {
+    padding: 10px;
+    text-align: center;
+}
+
 .burger-menu {
     background-color: #1259c3;
     color: #fff;
     display: inline-flex;
-    align-content: center;
-    padding: 5px 5px;
-    margin-left: 50px;
+    padding: 9px 10px;
     border-radius: 3px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.burger {
+    font-size: 18px;
+    text-align: center;
+}
+
+.banner {
+    margin-top: 15px;
 }
 
 main {
+    margin: auto;
     background-color: #ebebeb;
+    align-content: right;
+    width: 90%;
 }
 
 h2 {
     font-size: 24px;
 }
 
-#precio {
+.tarjeta {
+    background: #fff;
+    padding-bottom: 10px;
+    margin: 15px;
+}
+
+.detalle {
+    padding: 20px 50px;
+    margin-top: 20px;
+    border-top: solid 1px #ebebeb;
+    text-align: left;
+}
+
+.camion {
+    padding: 10px;
+    border: solid 1.5px #39b54a;
+    border-radius: 45px;
+    color: #39b54a;
+    font-size: 1.5em;
+}
+
+.precio {
     font-size: 18px;
+    margin-bottom: 0px;
 }
 
-#descu {
+.descu {
     font-size: 16px;
+    color: #39b54a;
+    margin-top: 0px;
 }
 
-h4 #descrip {
+.descrip {
+    visibility: hidden;
     font-size: 16px;
+    color: #666;
 }
 
 footer {
@@ -49,11 +108,9 @@ footer {
 
 .icono {
     font-size: 2em;
-}
-
-.icon-footer {
     color: #1259c3;
-    padding-top: 30px;
+    padding-top: 40px;
+    margin-bottom: 10px;
 }
 
 footer h3 {
@@ -71,4 +128,38 @@ footer p {
 .copyright {
     margin-top: 30px;
     padding-bottom: 10px;
+}
+
+.navbar {
+    visibility: hidden;
+}
+
+@media (min-width: 361px) {
+    .navbar {
+        visibility: visible;
+    }
+    .descrip {
+        visibility: visible;
+    }
+    .tarjeta {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .burger-menu {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar {
+        visibility: visible;
+    }
+    .descrip {
+        visibility: visible;
+    }
+    .tarjeta {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .burger-menu {
+        visibility: hidden;
+    }
 }
