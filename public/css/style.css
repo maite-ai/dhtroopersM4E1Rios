@@ -6,19 +6,22 @@ body {
 * {
     font-family: Roboto, "Helvetica Neue", Helvetica, Arial;
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 header {
     background-color: #EAC926;
 }
 
-.busqueda {
+.busqueda-boton {
+    margin-top: 20px;
     text-align: center;
 }
 
-.enlaces a {
-    color: black;
-    text-decoration: none;
+.compra-tarjetas {
+    margin-top: 10px;
+    text-align: center;
 }
 
 .boton {
@@ -29,28 +32,47 @@ header {
     background: #ebebeb;
 }
 
+.contenedor-links {
+    visibility: hidden;
+}
+
 .contenedor-burger {
-    padding: 10px;
+    padding: 5px;
     text-align: center;
+    visibility: visible;
 }
 
 .burger-menu {
     background-color: #1259c3;
-    color: #fff;
-    display: inline-flex;
     padding: 9px 10px;
     border-radius: 3px;
     text-align: center;
-    margin-top: 0px;
+    margin: auto;
 }
 
 .burger {
     font-size: 18px;
     text-align: center;
+    color: #fff;
+    align-self: center;
 }
 
 .banner {
     margin-top: 15px;
+}
+
+main section article i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: solid 1px #39b54a;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    right: 20px;
+    top: -15px;
 }
 
 main {
@@ -62,6 +84,11 @@ main {
 
 h2 {
     font-size: 24px;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .tarjeta {
@@ -79,10 +106,10 @@ h2 {
 
 .camion {
     padding: 10px;
-    border: solid 1.5px #39b54a;
-    border-radius: 45px;
+    border-radius: 50%;
     color: #39b54a;
     font-size: 1.5em;
+    background-color: #fff;
 }
 
 .precio {
@@ -104,6 +131,7 @@ h2 {
 
 footer {
     background-color: #fff;
+    text-align: center;
 }
 
 .icono {
@@ -130,36 +158,113 @@ footer p {
     padding-bottom: 10px;
 }
 
-.navbar {
-    visibility: hidden;
-}
-
 @media (min-width: 361px) {
     .navbar {
         visibility: visible;
     }
-    .descrip {
-        visibility: visible;
+    .contenedor-tarjetas {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .barra-nav1,
+    .barra-nav2,
+    a {
+        display: flex;
+        flex-flow: column;
+        text-decoration: none;
+        color: black;
+        text-align: left;
+        margin-left: 20px;
+        flex-grow: 0.3;
+    }
+    .listaA,
+    .listaB,
+    .listaC {
+        display: flex;
+        flex-flow: row;
+        border: solid 2px magenta;
+    }
+    .icon-nav {
+        align-items: center;
+    }
+    .burger-menu {
+        visibility: hidden;
     }
     .tarjeta {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
-    .burger-menu {
-        visibility: hidden;
+    .descrip {
+        visibility: visible;
     }
 }
 
 @media (min-width: 769px) {
     .navbar {
         visibility: visible;
+        display: flex;
+        justify-content: space-around;
     }
-    .descrip {
-        visibility: visible;
+    .burger-menu {
+        visibility: hidden;
     }
     .tarjeta {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
-    .burger-menu {
-        visibility: hidden;
+    .contenedor-tarjetas {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .descrip {
+        visibility: visible;
+    }
+    .caja-logo-busqueda {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        flex: 1 1 auto;
+    }
+    .busqueda-boton {
+        align-self: center;
+        flex: 2 1 auto;
+        text-align: center;
+    }
+    .compra-tarjetas {
+        align-self: center;
+        flex: 1 1 auto;
+        text-align: center;
+    }
+    .barra-nav1 {
+        flex: 2 1 auto;
+        display: flex;
+        flex-flow: row;
+        align-self: center;
+        text-align: center;
+        border: solid 1px black;
+        justify-content: space-around;
+    }
+    .barra-nav2 {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: row;
+        align-self: center;
+        text-align: center;
+        justify-content: space-around;
+        border: solid 1px black;
+    }
+    .lista1,
+    .lista2,
+    .lista3,
+    .lista4,
+    .listaA,
+    .listaB,
+    .listaC {
+        justify-content: space-around;
+        flex-grow: 0.5;
+        border: solid 1px turquoise;
+    }
+    .contenedor-pies {
+        display: flex;
+        justify-content: space-around;
     }
 }
