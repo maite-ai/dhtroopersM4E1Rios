@@ -1,11 +1,11 @@
 body {
     background-color: #ebebeb;
-    font-size: 12px;
 }
 
 * {
     font-family: Roboto, "Helvetica Neue", Helvetica, Arial;
     box-sizing: border-box;
+    font-size: 12px;
     margin: 0px;
     padding: 0px;
 }
@@ -14,14 +14,43 @@ header {
     background-color: #EAC926;
 }
 
+.caja-logo-busqueda {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin: 15px;
+    height: 50%;
+    width: 50%;
+    flex: 1 1 auto;
+}
+
 .busqueda-boton {
     margin-top: 20px;
     text-align: center;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadro-busqueda {
+    flex: 0 1 95%;
+    text-align: center;
+}
+
+.boton {
+    padding: 3px 5px;
+    flex: 1 0 5%;
+    text-align: center;
+    border-radius: 3px;
 }
 
 .compra-tarjetas {
     margin-top: 10px;
     text-align: center;
+    flex: 5 1 100%;
 }
 
 .boton {
@@ -32,14 +61,17 @@ header {
     background: #ebebeb;
 }
 
-.contenedor-links {
-    visibility: hidden;
+.navbar {
+    display: none;
 }
 
 .contenedor-burger {
-    padding: 5px;
+    margin-top: 0px;
+    padding: auto;
     text-align: center;
     visibility: visible;
+    display: flex;
+    justify-content: center;
 }
 
 .burger-menu {
@@ -47,7 +79,6 @@ header {
     padding: 9px 10px;
     border-radius: 3px;
     text-align: center;
-    margin: auto;
 }
 
 .burger {
@@ -95,38 +126,56 @@ h2 {
     background: #fff;
     padding-bottom: 10px;
     margin: 15px;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
 }
 
-.detalle {
-    padding: 20px 50px;
-    margin-top: 20px;
+.camion-detalle {
+    padding: 0px 50px;
+    margin-top: 0px;
+    margin-bottom: 20px;
     border-top: solid 1px #ebebeb;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
 }
 
 .camion {
     padding: 10px;
-    border-radius: 50%;
     color: #39b54a;
-    font-size: 1.5em;
-    background-color: #fff;
+    font-size: 16px;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.detalle {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .precio {
     font-size: 18px;
     margin-bottom: 0px;
+    flex-grow: 30%;
 }
 
 .descu {
     font-size: 16px;
     color: #39b54a;
     margin-top: 0px;
+    margin-left: 10px;
+    flex-grow: 70%;
+    text-align: left;
 }
 
 .descrip {
     visibility: hidden;
+    margin-top: 20px;
     font-size: 16px;
     color: #666;
+    text-align: left;
+    flex: 5 1 100%;
 }
 
 footer {
@@ -158,71 +207,67 @@ footer p {
     padding-bottom: 10px;
 }
 
+
+/* -- Tablets -- */
+
 @media (min-width: 361px) {
+    /* ------------ */
+    /* -- Header -- */
+    /* ------------ */
     .navbar {
+        margin-top: 25px;
+        margin-bottom: 0px;
         visibility: visible;
-    }
-    .contenedor-tarjetas {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .contenedor-burger {
+        display: none;
     }
     .barra-nav1,
     .barra-nav2,
     a {
-        display: flex;
-        flex-flow: column;
         text-decoration: none;
         color: black;
         text-align: left;
         margin-left: 20px;
-        flex-grow: 0.3;
     }
-    .listaA,
-    .listaB,
-    .listaC {
+    .barra-nav2 {
+        margin-right: 30px;
+    }
+    /* ---------- */
+    /* -- Main -- */
+    /* ---------- */
+    .contenedor-tarjetas {
         display: flex;
-        flex-flow: row;
-        border: solid 2px magenta;
-    }
-    .icon-nav {
-        align-items: center;
-    }
-    .burger-menu {
-        visibility: hidden;
+        flex-wrap: wrap;
     }
     .tarjeta {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 40%;
     }
     .descrip {
         visibility: visible;
     }
 }
 
+
+/* -- Desktop -- */
+
 @media (min-width: 769px) {
-    .navbar {
-        visibility: visible;
-        display: flex;
-        justify-content: space-around;
+    * {
+        font-size: 1rem;
     }
-    .burger-menu {
-        visibility: hidden;
-    }
-    .tarjeta {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    .contenedor-tarjetas {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .descrip {
-        visibility: visible;
-    }
+    /* ------------ */
+    /* -- Header -- */
+    /* ------------ */
     .caja-logo-busqueda {
         display: flex;
         justify-content: space-between;
     }
     .logo {
         flex: 1 1 auto;
+        max-width: 380px;
     }
     .busqueda-boton {
         align-self: center;
@@ -234,23 +279,27 @@ footer p {
         flex: 1 1 auto;
         text-align: center;
     }
+    .navbar {
+        margin-top: 25px;
+        margin-bottom: 0px;
+        visibility: visible;
+        display: flex;
+        justify-content: space-between;
+    }
     .barra-nav1 {
-        flex: 2 1 auto;
         display: flex;
         flex-flow: row;
         align-self: center;
         text-align: center;
-        border: solid 1px black;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .barra-nav2 {
-        flex: 1 1 auto;
         display: flex;
         flex-flow: row;
         align-self: center;
         text-align: center;
-        justify-content: space-around;
-        border: solid 1px black;
+        justify-content: space-between;
+        margin-right: 30px;
     }
     .lista1,
     .lista2,
@@ -259,10 +308,28 @@ footer p {
     .listaA,
     .listaB,
     .listaC {
-        justify-content: space-around;
         flex-grow: 0.5;
-        border: solid 1px turquoise;
     }
+    .contenedor-burger {
+        display: none;
+    }
+    /* ---------- */
+    /* -- Main -- */
+    /* ---------- */
+    .contenedor-tarjetas {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .tarjeta {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 21%;
+    }
+    .descrip {
+        visibility: visible;
+    }
+    /* ------------ */
+    /* -- Footer -- */
+    /* ------------ */
     .contenedor-pies {
         display: flex;
         justify-content: space-around;
