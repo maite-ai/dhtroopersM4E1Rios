@@ -3,7 +3,7 @@ body {
 }
 
 * {
-    font-family: Roboto, "Helvetica Neue", Helvetica, Arial;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
     box-sizing: border-box;
     font-size: 12px;
     margin: 0px;
@@ -35,29 +35,32 @@ header {
     align-items: center;
 }
 
-.cuadro-busqueda {
-    flex: 0 1 95%;
-    text-align: center;
-}
-
-.boton {
-    padding: 3px 5px;
-    flex: 1 0 5%;
-    text-align: center;
-    border-radius: 3px;
-}
-
 .compra-tarjetas {
     margin-top: 10px;
     text-align: center;
     flex: 5 1 100%;
 }
 
+.caja-cuadro {
+    flex: 0 1 auto;
+}
+
+.cuadro-busqueda {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.caja-boton {
+    flex: 0 1 auto;
+    text-align: left;
+}
+
 .boton {
+    padding: 2px 5px;
     font-size: 1em;
-    box-sizing: content-box;
-    width: 10px;
-    border-radius: solid 3px #666;
+    border-radius: 3px;
+    border: solid 1px #666;
     background: #ebebeb;
 }
 
@@ -90,20 +93,8 @@ header {
 
 .banner {
     margin-top: 15px;
-}
-
-main section article i {
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: solid 1px #39b54a;
-    background-color: #fff;
-    border-radius: 50%;
     position: relative;
-    right: 20px;
-    top: -15px;
+    top: 5px;
 }
 
 main {
@@ -113,8 +104,92 @@ main {
     width: 90%;
 }
 
+
+/* =================== LOGIN ======================== */
+
+.send-button {
+    background-color: #1259c3;
+    color: #fff;
+    width: 90%;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =================== REGISTER ======================== */
+
+.form-container,
+.login-form {
+    display: flex;
+    flex-flow: column;
+    margin-top: 30px;
+    width: 90%;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.name-lastname,
+.username,
+.email,
+.password {
+    margin-bottom: 35px;
+    width: 250px;
+    height: 28px;
+    border: none;
+    border-radius: 5px;
+}
+
+.name-lastname::-webkit-input-placeholder {
+    margin-left: 10px;
+    color: #666;
+}
+
+.username::-webkit-input-placeholder {
+    margin-left: 10px;
+    color: #666;
+}
+
+.email::-webkit-input-placeholder {
+    margin-left: 10px;
+    color: #666;
+}
+
+.password::-webkit-input-placeholder {
+    margin-left: 10px;
+    color: #666;
+}
+
+.name-lastname::-moz-placeholder {
+    font-size: 12px;
+    color: #666;
+}
+
+.username::-moz-placeholder {
+    font-size: 12px;
+    color: #666;
+}
+
+.email::-moz-placeholder {
+    font-size: 12px;
+    color: #666;
+}
+
+.password::-moz-placeholder {
+    font-size: 12px;
+    color: #666;
+}
+
 h2 {
     font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ultima-visita {
+    margin-top: 20px;
 }
 
 .contenedor-tarjetas {
@@ -131,51 +206,68 @@ h2 {
     flex-wrap: nowrap;
 }
 
+main section article i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: solid 1px #39b54a;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
 .camion-detalle {
-    padding: 0px 50px;
+    padding: 10px 0px;
     margin-top: 0px;
     margin-bottom: 20px;
     border-top: solid 1px #ebebeb;
-    text-align: center;
     display: flex;
     flex-flow: column;
+    justify-content: flex-start;
+    position: relative;
 }
 
 .camion {
-    padding: 10px;
     color: #39b54a;
-    font-size: 16px;
-    flex-grow: 1;
-    text-align: right;
 }
 
 .detalle {
+    margin-top: 10px;
+    margin-left: 10px;
     display: flex;
+    flex-flow: row;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .precio {
     font-size: 18px;
-    margin-bottom: 0px;
+    margin: 0px;
+    padding: 3px 5px;
     flex-grow: 30%;
 }
 
 .descu {
     font-size: 16px;
     color: #39b54a;
-    margin-top: 0px;
-    margin-left: 10px;
-    flex-grow: 70%;
+    margin: 0px;
+    padding: 3px 5px;
     text-align: left;
+    flex-grow: 70%;
 }
 
 .descrip {
+    right: 70px;
     visibility: hidden;
     margin-top: 20px;
     font-size: 16px;
     color: #666;
-    text-align: left;
-    flex: 5 1 100%;
+    text-align: center;
+    flex-grow: 100%;
 }
 
 footer {
