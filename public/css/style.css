@@ -14,55 +14,73 @@ header {
     background-color: #EAC926;
 }
 
-.caja-logo-busqueda {
+
+/* =================== SECCIÓN LOGO BUSQUEDA LEYENDA ======================== */
+
+.logo-searchbar-text {
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
+}
+
+.logo-busqueda-boton {
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
-    margin: 15px;
-    height: 50%;
+    box-sizing: content-box;
     width: 50%;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
+    margin: 15px 5px;
 }
 
-.busqueda-boton {
-    margin-top: 20px;
+.caja-cuadro {
+    box-sizing: content-box;
+    width: 50%;
+    flex: 0 1 60px;
     text-align: center;
-    flex: 1 1 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: nowrap;
+    padding: auto;
+    margin-left: 0px;
+}
+
+.casillero {
+    border: none;
+    height: 28px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin-left: 0px;
+    flex: 1 0 auto;
+}
+
+.caja-boton {
+    text-align: left;
+    flex: 1 0 auto;
+}
+
+.boton {
+    padding: 6.5px 5px;
+    font-size: 1em;
+    border: none;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #fff;
+    color: #666;
 }
 
 .compra-tarjetas {
     margin-top: 10px;
     text-align: center;
-    flex: 5 1 100%;
+    flex: 2 1 100%;
 }
 
-.caja-cuadro {
-    flex: 0 1 auto;
-}
 
-.cuadro-busqueda {
-    padding-left: 5px;
-    padding-right: 5px;
-    text-align: center;
-}
-
-.caja-boton {
-    flex: 0 1 auto;
-    text-align: left;
-}
-
-.boton {
-    padding: 2px 5px;
-    font-size: 1em;
-    border-radius: 3px;
-    border: solid 1px #666;
-    background: #ebebeb;
-}
+/* =================== SECCIÓN NAVBAR - BURGER ======================== */
 
 .navbar {
     display: none;
@@ -91,6 +109,9 @@ header {
     align-self: center;
 }
 
+
+/* =================== SECCIÓN BANNER ======================== */
+
 .banner {
     margin-top: 15px;
     position: relative;
@@ -105,82 +126,7 @@ main {
 }
 
 
-/* =================== LOGIN ======================== */
-
-.send-button {
-    background-color: #1259c3;
-    color: #fff;
-    width: 90%;
-    height: 35px;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-
-/* =================== REGISTER ======================== */
-
-.form-container,
-.login-form {
-    display: flex;
-    flex-flow: column;
-    margin-top: 30px;
-    width: 90%;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.name-lastname,
-.username,
-.email,
-.password {
-    margin-bottom: 35px;
-    width: 250px;
-    height: 28px;
-    border: none;
-    border-radius: 5px;
-}
-
-.name-lastname::-webkit-input-placeholder {
-    margin-left: 10px;
-    color: #666;
-}
-
-.username::-webkit-input-placeholder {
-    margin-left: 10px;
-    color: #666;
-}
-
-.email::-webkit-input-placeholder {
-    margin-left: 10px;
-    color: #666;
-}
-
-.password::-webkit-input-placeholder {
-    margin-left: 10px;
-    color: #666;
-}
-
-.name-lastname::-moz-placeholder {
-    font-size: 12px;
-    color: #666;
-}
-
-.username::-moz-placeholder {
-    font-size: 12px;
-    color: #666;
-}
-
-.email::-moz-placeholder {
-    font-size: 12px;
-    color: #666;
-}
-
-.password::-moz-placeholder {
-    font-size: 12px;
-    color: #666;
-}
+/* =================== SECCIÓN TAJETAS ======================== */
 
 h2 {
     font-size: 24px;
@@ -270,6 +216,9 @@ main section article i {
     flex-grow: 100%;
 }
 
+
+/* =================== SECCIÓN FOOTER ======================== */
+
 footer {
     background-color: #fff;
     text-align: center;
@@ -300,18 +249,116 @@ footer p {
 }
 
 
+/* =================== LOGIN ======================== */
+
+.send-button {
+    background-color: #1259c3;
+    color: #fff;
+    width: 90%;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =================== REGISTER ======================== */
+
+.form-container,
+.login-form {
+    display: flex;
+    flex-flow: column;
+    margin-top: 30px;
+    width: 90%;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.name-lastname,
+.username,
+.email,
+.password {
+    margin-bottom: 35px;
+    width: 250px;
+    height: 28px;
+    border: none;
+    border-radius: 5px;
+}
+
+.name-lastname::-webkit-input-placeholder {
+    margin-left: 10px;
+    color: #666;
+}
+
+.username::-webkit-input-placeholder {
+    margin-left: 10px;
+    color: #666;
+}
+
+.email::-webkit-input-placeholder {
+    margin-left: 10px;
+    color: #666;
+}
+
+.password::-webkit-input-placeholder {
+    margin-left: 10px;
+    color: #666;
+}
+
+.name-lastname::-moz-placeholder {
+    font-size: 12px;
+    color: #666;
+}
+
+.username::-moz-placeholder {
+    font-size: 12px;
+    color: #666;
+}
+
+.email::-moz-placeholder {
+    font-size: 12px;
+    color: #666;
+}
+
+.password::-moz-placeholder {
+    font-size: 12px;
+    color: #666;
+}
+
+
 /* -- Tablets -- */
 
 @media (min-width: 361px) {
-    /* ------------ */
-    /* -- Header -- */
-    /* ------------ */
+    /* =================== HEADER ======================== */
+    .seccion-logo-busqueda {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .compra-tarjetas {
+        justify-content: center;
+        align-self: center;
+        flex: 0 1 auto;
+    }
+    .leyenda {
+        width: 30%;
+        margin-right: 15px;
+    }
+    .logo-busqueda-boton {
+        text-align: center;
+        justify-content: center;
+        flex: 1 1 auto;
+    }
+    .casillero {
+        width: 150px;
+    }
     .navbar {
         margin-top: 25px;
         margin-bottom: 0px;
         visibility: visible;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .contenedor-burger {
         display: none;
@@ -322,14 +369,24 @@ footer p {
         text-decoration: none;
         color: black;
         text-align: left;
-        margin-left: 20px;
     }
+    .barra-nav1,
     .barra-nav2 {
-        margin-right: 30px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
     }
-    /* ---------- */
-    /* -- Main -- */
-    /* ---------- */
+    .lista1,
+    .lista2,
+    .lista3,
+    .lista4,
+    .listaA,
+    .listaB,
+    .listaC {
+        font-size: 8px;
+        padding: 3px;
+    }
+    /* =================== MAIN ======================== */
     .contenedor-tarjetas {
         display: flex;
         flex-wrap: wrap;
@@ -350,64 +407,43 @@ footer p {
     * {
         font-size: 1rem;
     }
-    /* ------------ */
-    /* -- Header -- */
-    /* ------------ */
-    .caja-logo-busqueda {
-        display: flex;
-        justify-content: space-between;
-    }
+    /* =================== HEADER ======================== */
     .logo {
-        flex: 1 1 auto;
-        max-width: 380px;
-    }
-    .busqueda-boton {
-        align-self: center;
-        flex: 2 1 auto;
-        text-align: center;
+        margin-left: 20px;
+        flex: 1 1 30%;
     }
     .compra-tarjetas {
-        align-self: center;
-        flex: 1 1 auto;
-        text-align: center;
+        flex: 1 1 40%;
     }
-    .navbar {
-        margin-top: 25px;
-        margin-bottom: 0px;
-        visibility: visible;
-        display: flex;
-        justify-content: space-between;
+    .logo-busqueda-boton {
+        justify-content: space-around;
+        flex: 1 1 60%;
+        margin-top: 10px;
     }
-    .barra-nav1 {
-        display: flex;
-        flex-flow: row;
-        align-self: center;
-        text-align: center;
-        justify-content: space-between;
+    .casillero {
+        flex: 1 1 70%;
+        width: 350px;
+        height: 24px;
     }
-    .barra-nav2 {
-        display: flex;
-        flex-flow: row;
-        align-self: center;
-        text-align: center;
-        justify-content: space-between;
-        margin-right: 30px;
-    }
-    .lista1,
-    .lista2,
-    .lista3,
-    .lista4,
-    .listaA,
-    .listaB,
-    .listaC {
-        flex-grow: 0.5;
+    .boton {
+        padding: 3px 5px;
     }
     .contenedor-burger {
         display: none;
     }
-    /* ---------- */
-    /* -- Main -- */
-    /* ---------- */
+    .barra-nav1 {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex: 1 1 50%;
+        margin-right: 5%;
+    }
+    .barra-nav2 {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex: 1 1 50%;
+        margin-left: 5%;
+    }
+    /* =================== MAIN ======================== */
     .contenedor-tarjetas {
         display: flex;
         flex-wrap: wrap;
@@ -419,9 +455,7 @@ footer p {
     .descrip {
         visibility: visible;
     }
-    /* ------------ */
-    /* -- Footer -- */
-    /* ------------ */
+    /* =================== FOOTER ======================== */
     .contenedor-pies {
         display: flex;
         justify-content: space-around;
