@@ -152,6 +152,11 @@ h2 {
     flex-wrap: nowrap;
 }
 
+.tarjeta:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    transition: border 0.5s;
+}
+
 main section article i {
     display: block;
     font-size: 16px;
@@ -447,10 +452,6 @@ footer p {
     .tarjeta {
         width: 40%;
     }
-    .tarjeta:hover {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        transition: border 0.5s;
-    }
 }
 
 
@@ -502,7 +503,6 @@ footer p {
         flex-wrap: wrap;
     }
     .tarjeta {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 21%;
     }
     .descrip {
