@@ -58,34 +58,53 @@
         </section>
     </header>
     <main>
-        <article class="form-container">
-        <form method="POST" action="#" class="register-form">
-            <div>
+        <h2> Registro de usuario</h2>
+        <article class="register-container">  
+            <form method="POST" action="#" class="register-form">
                 <input type="text" placeholder="  Nombre y apellido" name="name-lastname" class="name-lastname"></input>
                 <input type="text" placeholder="  Nombre  de usuario" name="username" class="username"></input>
                 <input type="email" placeholder="  E-mail" name="email" class="email"></input>
-                <h3>Fecha de nacimiento</h3>
+                
+                <h3 class="titulito">Fecha de nacimiento</h3>
                 <input type="date" value="  mm/dd/yyyy" name="birthday" class="birthday"></input>
                 <input type="text" placeholder="  Domicilio" name="address" class="address"></input>
-                <h3>Perfil de usuario</h3>
-                <input type="radio" class="radio1">Comprador</input>
-                <input type="radio" class="radio2">Vendedor</input>
-                <h3>Categorías de Interés</h3>
+                                
+                <h3 class="titulito">Perfil de usuario</h3>
+                <div class="perfil-usu"> 
+                    <div  class="radio-item">
+                        <input type="radio"><label class="radio-label">Comprador</label></input>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio"><label class="radio-label">Vendedor</label></input>
+                    </div>
+                </div>        
+                <h3 class="titulito">Categorías de Interés</h3>
                 <div class="checkslist">
-                    <input type="checkbox" class="check1">Electro</input>
-                    <input type="checkbox" class="check2">Moda</input>
-                    <input type="checkbox" class="check3">Hogar</input>
-                    <input type="checkbox" class="check4">Juguetería</input>
-                    <input type="checkbox" class="check5">Vida Sana</input>
+                    <div class="check-item">
+                        <input type="checkbox"><label class="check-label">  Electro</label></input>
+                    </div>
+                    <div class="check-item">
+                        <input type="checkbox"><label class="check-label">  Moda</label></input>
+                    </div>
+                    <div class="check-item">
+                        <input type="checkbox"><label class="check-label">  Hogar</label></input>
+                    </div>
+                    <div class="check-item">
+                        <input type="checkbox"><label class="check-label">  Juguetería</label></input>
+                    </div>
+                    <div class="check-item">
+                        <input type="checkbox"><label class="check-label">  Vida Sana</label></input>
+                    </div>
                 </div>
-                <h3>Foto de usuario</h3>
-                <input type="file" name="userpic" accept="image/*" class="userpic"></input>
-                <input type="password" class="password" name="password" placeholder="  Contraseña"></input>
+                <h3 class="titulito">Foto de usuario</h3>
+                <input type="file" name="userpic" accept="image/*" class="userpic"></input>                    <input type="password" class="password" name="password" placeholder="  Contraseña"></input>
                 <input type="password" class="password" name="password" placeholder="  Confirmar contraseña"></input>
-                <a href="./home.html" class="send-button"><button type="submit"> Enviar<a/></button>
-                <button type="reset" class="reset-button"> Borrar datos</button>
-            </div>
-        </form>
+                <div class="botones">
+                    <button type="submit" class="boton-sincolor"><a href="./home.html" class="send-button"> Enviar<a/></button>
+                    <button type="reset" class="reset-button"> Borrar datos</button>
+                </div>
+            </form>
+        </article>
     </main>
     <footer>
         <section class="contenedor-pies">
