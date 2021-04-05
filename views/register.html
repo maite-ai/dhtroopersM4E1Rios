@@ -61,9 +61,9 @@
         <h2> Registro de usuario</h2>
         <article class="register-container">  
             <form method="POST" action="#" class="register-form">
-                <input type="text" placeholder="  Nombre y apellido" name="name-lastname" class="name-lastname"></input>
-                <input type="text" placeholder="  Nombre  de usuario" name="username" class="username"></input>
-                <input type="email" placeholder="  E-mail" name="email" class="email"></input>
+                <input type="text" placeholder="  Nombre y apellido" name="name-lastname" class="name-lastname" required></input>
+                <input type="text" placeholder="  Nombre  de usuario" name="username" class="username" minlength="6" required></input>
+                <input type="email" placeholder="  E-mail" name="email" class="email" required title="Ingrese un correo electrónico válido."></input>
                 
                 <h3 class="titulito">Fecha de nacimiento</h3>
                 <input type="date" value="  mm/dd/yyyy" name="birthday" class="birthday"></input>
@@ -97,10 +97,11 @@
                     </div>
                 </div>
                 <h3 class="titulito">Foto de usuario</h3>
-                <input type="file" name="userpic" accept="image/*" class="userpic"></input>                    <input type="password" class="password" name="password" placeholder="  Contraseña"></input>
-                <input type="password" class="password" name="password" placeholder="  Confirmar contraseña"></input>
+                <input type="file" name="userpic" accept="image/*" class="userpic"></input>                    
+                <input type="password" class="password" name="password" placeholder="  Contraseña" minlength="8" required></input>
+                <input type="password" class="password" name="password" placeholder="  Confirmar contraseña" required></input>
                 <div class="botones">
-                    <button type="submit" class="boton-sincolor"><a href="./home.html" class="send-button"> Enviar<a/></button>
+                    <button type="submit" class="boton-sincolor"><a href="./" class="send-button"> Enviar<a/></button>
                     <button type="reset" class="reset-button"> Borrar datos</button>
                 </div>
             </form>

@@ -445,11 +445,11 @@ footer p {
         flex-wrap: wrap;
     }
     .tarjeta {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
         width: 40%;
     }
-    .descrip {
-        visibility: visible;
+    .tarjeta:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        transition: border 0.5s;
     }
 }
 
