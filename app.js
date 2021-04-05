@@ -12,4 +12,6 @@ app.get("/register", (req, res) => { res.sendFile(path.join(__dirname, "/views/r
 
 app.get("/login", (req, res) => { res.sendFile(path.join(__dirname, "/views/login.html")) });
 
-app.listen(port || 3000, () => console.log("Escuchando en puerto " + port));
+app.listen(port || 3000, () => {
+    console.log("Escuchando en puerto " + port);
+});
