@@ -283,6 +283,11 @@ footer p {
     transition: 0.5s;
 }
 
+.boton-sincolor:hover {
+    background-color: #0022aa;
+    transition: 0.5s;
+}
+
 
 /* =================== REGISTER ======================== */
 
