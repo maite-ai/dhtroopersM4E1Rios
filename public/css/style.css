@@ -308,6 +308,9 @@ footer p {
 .birthday,
 .address,
 .password {
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
     margin-bottom: 25px;
     width: 100%;
     height: 28px;
